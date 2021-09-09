@@ -37,6 +37,7 @@ namespace DTS\eBaySDK\Browse\Types;
  * @property \DTS\eBaySDK\Browse\Types\ShippingOptionSummary[] $shippingOptions
  * @property \DTS\eBaySDK\Browse\Types\Image[] $thumbnailImages
  * @property string $title
+ * @property string $priorityListing
  */
 class ItemSummary extends \DTS\eBaySDK\Types\BaseType
 {
@@ -193,6 +194,12 @@ class ItemSummary extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'title'
+        ],
+        'priorityListing' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'priorityListing'
         ]
     ];
 
