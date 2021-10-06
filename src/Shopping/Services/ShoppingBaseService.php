@@ -45,6 +45,11 @@ class ShoppingBaseService extends \DTS\eBaySDK\Services\BaseService
      * HTTP header constant. Your tracking partner ID.
      */
     const HDR_TRACKING_PARTNER_CODE = 'X-EBAY-API-TRACKING-PARTNER-CODE';
+    
+    /**
+     * HTTP header constant. The OAUTH Authentication Token that is used to validate the caller has permission to access the eBay servers.
+     */
+    const HDR_AUTHORIZATION = 'X-EBAY-API-IAF-TOKEN';
 
     /**
      * @param array $config Configuration option values.
@@ -117,6 +122,10 @@ class ShoppingBaseService extends \DTS\eBaySDK\Services\BaseService
 
         if ($this->getConfig('trackingPartnerCode')) {
             $headers[self::HDR_TRACKING_PARTNER_CODE] = $this->getConfig('trackingPartnerCode');
+        }
+        
+        if ($this->getConfig('authorization')) {
+            $headers[self::HDR_AUTHORIZATION] = $this->getConfig('authorization');
         }
 
         return $headers;
