@@ -37,7 +37,21 @@ namespace DTS\eBaySDK\Browse\Types;
  * @property \DTS\eBaySDK\Browse\Types\ShippingOptionSummary[] $shippingOptions
  * @property \DTS\eBaySDK\Browse\Types\Image[] $thumbnailImages
  * @property string $title
- * @property string $priorityListing
+ * @property boolean $priorityListing
+ * @property string $shortDescription
+ * @property string $legacyItemId
+ * @property boolean $availableCoupons
+ * @property string $itemCreationDate
+ * @property string $itemEndDate
+ * @property boolean $topRatedBuyingExperience
+ * @property string $listingMarketplaceId
+ * @property boolean $adultOnly
+ * @property \DTS\eBaySDK\Browse\Enums\CompatibilityMatchEnum $compatibilityMatch
+ * @property string $compatibilityMatch
+ * @property \DTS\eBaySDK\Browse\Types\CompatibilityProperty[] $compatibilityProperties
+ * @property string $qualifiedPrograms
+ * @property \DTS\eBaySDK\Browse\Types\ConvertedAmount $unitPrice
+ * @property integer $watchCount
  */
 class ItemSummary extends \DTS\eBaySDK\Types\BaseType
 {
@@ -200,7 +214,85 @@ class ItemSummary extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'priorityListing'
-        ]
+        ],
+        'shortDescription' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'shortDescription'
+        ],
+        'legacyItemId' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'legacyItemId'
+        ],
+        'availableCoupons' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'availableCoupons'
+        ],
+        'itemCreationDate' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'itemCreationDate'
+        ],
+        'itemEndDate' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'itemEndDate'
+        ],
+        'topRatedBuyingExperience' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'topRatedBuyingExperience'
+        ],
+        'listingMarketplaceId' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'listingMarketplaceId'
+        ],
+        'adultOnly' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'adultOnly'
+        ],
+        'compatibilityMatch' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'compatibilityMatch'
+        ],
+        'compatibilityProperties' => [
+            'type' => 'DTS\eBaySDK\Browse\Types\CompatibilityProperty',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'compatibilityProperties'
+        ],
+        'qualifiedPrograms' => [
+            'type' => 'string',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'qualifiedPrograms'
+        ],
+        'unitPrice' => [
+            'type' => 'DTS\eBaySDK\Browse\Types\ConvertedAmount',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'unitPrice'
+        ],
+        'watchCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'watchCount'
+        ],
     ];
 
     /**

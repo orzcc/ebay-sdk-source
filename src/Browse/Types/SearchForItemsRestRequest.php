@@ -22,6 +22,7 @@ namespace DTS\eBaySDK\Browse\Types;
  * @property string $offset
  * @property string $q
  * @property string $sort
+ * @property string $compatibility_filter
  */
 class SearchForItemsRestRequest extends \DTS\eBaySDK\Types\BaseType
 {
@@ -88,6 +89,12 @@ class SearchForItemsRestRequest extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'sort'
+        ],
+        'compatibility_filter' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'compatibility_filter'
         ]
     ];
 

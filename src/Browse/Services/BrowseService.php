@@ -91,6 +91,9 @@ class BrowseService extends \DTS\eBaySDK\Browse\Services\BrowseBaseService
                 ],
                 'sort' => [
                     'valid' => ['string']
+                ],
+                'compatibility_filter' => [
+                    'valid' => ['string']
                 ]
             ]
         ]
