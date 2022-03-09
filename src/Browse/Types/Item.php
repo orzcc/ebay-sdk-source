@@ -58,6 +58,7 @@ namespace DTS\eBaySDK\Browse\Types;
  * @property string $title
  * @property boolean $topRatedBuyingExperience
  * @property integer $uniqueBidderCount
+ * @property \DTS\eBaySDK\Browse\Types\Product $product
  * @property \DTS\eBaySDK\Browse\Types\ErrorDetailV3[] $warnings
  */
 class Item extends \DTS\eBaySDK\Types\BaseType
@@ -341,6 +342,12 @@ class Item extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'uniqueBidderCount'
+        ],
+        'product' => [
+            'type' => 'DTS\eBaySDK\Browse\Types\Product',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'product'
         ],
         'warnings' => [
             'type' => 'DTS\eBaySDK\Browse\Types\ErrorDetailV3',
