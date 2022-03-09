@@ -11,7 +11,8 @@
 namespace DTS\eBaySDK\Browse\Types;
 
 /**
- *
+ * @property string $legacyItemId
+ * @property string $title
  * @property \DTS\eBaySDK\Browse\Types\Image[] $additionalImages
  * @property string $ageGroup
  * @property integer $bidCount
@@ -55,7 +56,6 @@ namespace DTS\eBaySDK\Browse\Types;
  * @property string $sizeType
  * @property string $subtitle
  * @property \DTS\eBaySDK\Browse\Types\Taxes[] $taxes
- * @property string $title
  * @property boolean $topRatedBuyingExperience
  * @property integer $uniqueBidderCount
  * @property \DTS\eBaySDK\Browse\Types\Product $product
@@ -67,6 +67,18 @@ class Item extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'legacyItemId' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'legacyItemId'
+        ],
+        'title' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'title'
+        ],
         'additionalImages' => [
             'type' => 'DTS\eBaySDK\Browse\Types\Image',
             'repeatable' => true,
@@ -324,12 +336,6 @@ class Item extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'taxes'
-        ],
-        'title' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'title'
         ],
         'topRatedBuyingExperience' => [
             'type' => 'boolean',
